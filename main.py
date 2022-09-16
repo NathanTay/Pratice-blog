@@ -172,7 +172,7 @@ def show_post(post_id):
     all_comments = db.session.query(Comment).all()
     if form.validate_on_submit():
         if not current_user.is_authenticated:
-            flash("You need to login or register to comment.")
+            flash("You need to login or register to commen.")
             return redirect(url_for("login"))
         requested_post = BlogPost.query.get(post_id)
         data = form.body.data
